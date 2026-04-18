@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallas Newcomer QuickStart: Refugee and Newcomer Guide for Dallas</title>
+<meta name="description" content="A task first guide for refugees, SIV holders, and new arrivals in Dallas and the DFW area. First week checklist, emergency numbers, DART guide, school enrollment, and verified directory.">
+<meta property="og:title" content="Dallas Newcomer QuickStart">
+<meta property="og:description" content="First week checklist, emergency numbers, DART guide, and verified directory for refugees and newcomers in Dallas.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1f4330;
+    --forest-light: #2f5c45;
+    --rust: #b8552e;
+    --rust-light: #c96a42;
+    --honey: #d9a84a;
+    --honey-light: #e6bd6c;
+    --cream: #f8f3eb;
+    --warm-white: #fdfaf3;
+    --text: #1f4330;
+    --text-muted: #5a6052;
+    --border: #ddd4bf;
+    --red-soft: #c94f3a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  nav {
+    background: var(--forest);
+    position: sticky; top: 0; z-index: 100;
+    padding: 0 1.5rem;
+  }
+  .nav-inner {
+    max-width: 900px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--honey-light);
+    font-size: 1.15rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.78);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; }
+  .mobile-menu { display: none; background: var(--forest); border-top: 1px solid rgba(255,255,255,0.1); position: sticky; top: 56px; z-index: 99; }
+  .mobile-menu.open { display: block; }
+  .mobile-menu a { display: block; color: rgba(255,255,255,0.82); text-decoration: none; padding: 0.85rem 1.5rem; font-size: 0.92rem; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .mobile-menu a:hover { color: white; background: rgba(255,255,255,0.05); }
+  .hero { background: var(--forest); color: white; padding: 4rem 1.5rem 3.5rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(184,85,46,0.28) 0%, transparent 65%); pointer-events: none; }
+  .hero-inner { max-width: 700px; margin: 0 auto; position: relative; }
+  .hero-label { display: inline-block; background: rgba(217,168,74,0.2); color: var(--honey-light); border: 1px solid rgba(217,168,74,0.3); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 100px; margin-bottom: 1.25rem; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin-bottom: 1rem; color: white; font-weight: 600; }
+  .hero h1 em { font-style: italic; color: var(--honey-light); font-weight: 400; }
+  .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.78); max-width: 560px; margin-bottom: 1.75rem; }
+  .hero-langs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; align-items: center; }
+  .hero-langs span { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-right: 0.25rem; }
+  .lang-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.82); border: 1px solid rgba(255,255,255,0.15); padding: 0.25rem 0.7rem; border-radius: 100px; font-size: 0.8rem; text-decoration: none; transition: all 0.2s; cursor: pointer; }
+  .lang-tag:hover { background: rgba(255,255,255,0.18); color: white; }
+  .lang-tag.active-lang { background: rgba(217,168,74,0.25); color: var(--honey-light); border-color: rgba(217,168,74,0.4); }
+  .hero-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .btn-primary { background: var(--honey); color: var(--forest); font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-size: 0.95rem; transition: all 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--honey-light); transform: translateY(-1px); }
+  .btn-secondary { background: transparent; color: white; font-weight: 500; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.2s; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.07); }
+  .disclaimer { background: #fff6e6; border-bottom: 1px solid #eacf92; padding: 0.6rem 1.5rem; text-align: center; font-size: 0.78rem; color: #7a5520; }
+  section { padding: 4rem 1.5rem; }
+  section:nth-child(even) { background: var(--cream); }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+  .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust); margin-bottom: 0.5rem; }
+  .section-inner h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--forest); margin-bottom: 0.6rem; line-height: 1.2; font-weight: 600; }
+  .section-intro { color: var(--text-muted); max-width: 600px; margin-bottom: 2.5rem; font-size: 0.97rem; }
+  .checklist-days { display: flex; flex-direction: column; gap: 2rem; }
+  .day-label { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--forest); color: white; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 100px; margin-bottom: 1rem; }
+  .checklist { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 0; list-style: none; }
+  .checklist li { display: flex; align-items: flex-start; gap: 0.75rem; background: white; border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.93rem; }
+  .checklist li .icon { width: 22px; height: 22px; background: var(--rust); border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; color: white; font-size: 0.68rem; font-weight: 700; }
+  .checklist li a { color: var(--rust); font-weight: 500; }
+  .checklist li a:hover { color: var(--forest); }
+  .checklist li strong { color: var(--forest); }
+  .decision-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+  .decision-card { border-radius: 10px; padding: 1.25rem; border: 2px solid transparent; }
+  .decision-card.red { background: #fff2f0; border-color: #f5c4bc; }
+  .decision-card.blue { background: #eef5f8; border-color: #bcd3dc; }
+  .decision-card.green { background: #f0f7f2; border-color: #bcd8c5; }
+  .decision-card.honey { background: #fff8e6; border-color: #ebd9a0; }
+  .decision-number { font-family: 'Playfair Display', serif; font-size: 2.1rem; line-height: 1; margin-bottom: 0.4rem; font-weight: 600; }
+  .decision-card.red .decision-number { color: var(--red-soft); }
+  .decision-card.blue .decision-number { color: #2a6f7a; }
+  .decision-card.green .decision-number { color: var(--forest); }
+  .decision-card.honey .decision-number { color: #a87820; }
+  .decision-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--forest); }
+  .decision-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+  .decision-card .when { margin-top: 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .decision-card ul { list-style: none; padding: 0; margin-top: 0.3rem; }
+  .decision-card ul li { font-size: 0.82rem; color: var(--text); padding: 0.2rem 0; padding-left: 0.9rem; position: relative; }
+  .decision-card ul li::before { content: '›'; position: absolute; left: 0; font-size: 0.9rem; color: var(--text-muted); }
+  .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .guide-card { background: white; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: all 0.2s; }
+  .guide-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: var(--rust); }
+  .guide-card-header { padding: 1.1rem 1.25rem 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+  .guide-emoji { font-size: 1.1rem; color: var(--rust); font-weight: 700; width: 28px; text-align: center; flex-shrink: 0; }
+  .guide-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--forest); }
+  .guide-card-body { padding: 0 1.25rem 1.1rem; font-size: 0.85rem; color: var(--text-muted); }
+  .guide-card-steps { display: none; background: var(--cream); border-top: 1px solid var(--border); padding: 1rem 1.25rem; }
+  .guide-card-steps.open { display: block; }
+  .guide-card-steps ol { padding-left: 1.1rem; }
+  .guide-card-steps li { font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text); }
+  .guide-card-steps a { color: var(--rust); font-weight: 500; }
+  .guide-card-steps .verify { display: inline-block; background: #fff8ec; color: #7a5520; font-size: 0.72rem; font-weight: 600; border: 1px solid #eacf92; border-radius: 4px; padding: 0.1rem 0.4rem; margin-left: 0.25rem; vertical-align: middle; }
+  .guide-toggle { display: block; width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 0.6rem 1.25rem; border-top: 1px solid var(--border); font-size: 0.82rem; font-weight: 600; color: var(--rust); font-family: 'Inter', sans-serif; letter-spacing: 0.02em; }
+  .guide-toggle:hover { background: var(--cream); }
+  .directory-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .filter-btn { background: white; border: 1px solid var(--border); color: var(--text-muted); padding: 0.35rem 0.9rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.15s; }
+  .filter-btn:hover, .filter-btn.active { background: var(--forest); color: white; border-color: var(--forest); }
+  .dir-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .dir-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.25rem; transition: border-color 0.2s; }
+  .dir-card:hover { border-color: var(--rust-light); }
+  .dir-card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.4rem; }
+  .dir-card h3 { font-size: 0.92rem; font-weight: 600; color: var(--forest); flex: 1; }
+  .dir-tag { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; padding: 0.2rem 0.5rem; border-radius: 4px; white-space: nowrap; margin-left: 0.5rem; flex-shrink: 0; }
+  .tag_health { background: #e8f2ec; color: #1e5a3a; }
+  .tag_legal { background: #f2ebf5; color: #5a3e7a; }
+  .tag_employment { background: #fff0e0; color: #8a4e10; }
+  .tag_education { background: #f0eee8; color: #5a4a1e; }
+  .tag_housing { background: #f8ede5; color: #7a4522; }
+  .tag_benefits { background: #eff5e8; color: #3a5a1e; }
+  .tag_services { background: #f5ece0; color: #6a4a1e; }
+  .tag_digital { background: #e8eff5; color: #2a4e7a; }
+  .dir-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+  .dir-meta { font-size: 0.78rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.2rem; }
+  .dir-meta a { color: var(--rust); font-weight: 500; text-decoration: none; word-break: break-all; }
+  .dir-meta a:hover { color: var(--forest); }
+  .dir-meta span { display: flex; align-items: flex-start; gap: 0.35rem; }
+  .dir-meta .mi { font-size: 0.8rem; flex-shrink: 0; opacity: 0.6; }
+  .dir-card[data-cat].hidden { display: none; }
+  .guides-list { display: flex; flex-direction: column; gap: 1rem; }
+  .guide-link-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.25rem; display: flex; align-items: center; gap: 1rem; text-decoration: none; transition: all 0.2s; }
+  .guide-link-card:hover { border-color: var(--rust); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .guide-link-icon { width: 42px; height: 42px; background: var(--forest); color: var(--honey-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.03em; flex-shrink: 0; }
+  .guide-link-text h3 { font-size: 0.93rem; font-weight: 600; color: var(--forest); }
+  .guide-link-text p { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.15rem; }
+  footer { background: var(--forest); color: rgba(255,255,255,0.58); padding: 2.5rem 1.5rem; text-align: center; font-size: 0.82rem; }
+  footer strong { color: rgba(255,255,255,0.9); }
+  footer a { color: var(--honey-light); }
+  footer p + p { margin-top: 0.5rem; }
+  .verified-date { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }
+  @media (max-width: 640px) { .nav-links { display: none; } .hamburger { display: flex; } .decision-grid { grid-template-columns: 1fr; } .guides-grid { grid-template-columns: 1fr; } .dir-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Dallas QuickStart</a>
+    <ul class="nav-links">
+      <li><a href="#start-here">Start Here</a></li>
+      <li><a href="#get-help">Get Help</a></li>
+      <li><a href="#guides">Guides</a></li>
+      <li><a href="#directory">Directory</a></li>
+      <li><a href="#official">Official Guides</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#start-here" onclick="closeMenu()">Start Here</a>
+  <a href="#get-help" onclick="closeMenu()">Get Help</a>
+  <a href="#guides" onclick="closeMenu()">Guides</a>
+  <a href="#directory" onclick="closeMenu()">Directory</a>
+  <a href="#official" onclick="closeMenu()">Official Guides</a>
+</div>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Companion to Official Resources</div>
+    <h1>New in<br><em>Dallas?</em><br>Start with this.</h1>
+    <p>A task first guide for newcomers, refugees, SIV holders, and new Americans in Dallas and across the DFW area. This site does not replace official guides. It helps you use them.</p>
+    <div class="hero-langs">
+      <span>Read in:</span>
+      <a class="lang-tag active-lang" href="#" onclick="setLang('en');return false;">English</a>
+      <a class="lang-tag" href="#" onclick="setLang('es');return false;">Español</a>
+      <a class="lang-tag" href="#" onclick="setLang('fa');return false;">دری</a>
+      <a class="lang-tag" href="#" onclick="setLang('ps');return false;">پښتو</a>
+      <a class="lang-tag" href="#" onclick="setLang('ar');return false;">العربية</a>
+      <a class="lang-tag" href="#" onclick="setLang('fr');return false;">Français</a>
+    </div>
+    <div class="hero-buttons">
+      <a href="#start-here" class="btn-primary">› Start Here</a>
+      <a href="#get-help" class="btn-secondary">Get Help Now</a>
+    </div>
+  </div>
+</div>
+<div class="disclaimer">◆ <strong>Informational only.</strong> Not legal advice. Services and eligibility change. Always verify with the official agency directly. Last reviewed: April 2026.</div>
+
+<section id="start-here">
+  <div class="section-inner">
+    <div class="section-label">First 30 Days</div>
+    <h2>Your First 30 Days in Dallas</h2>
+    <p class="section-intro">Do these in order. Each item links to the official source. If you need help in your language, call <strong>211</strong>, free and available 24/7 in many languages.</p>
+    <div class="checklist-days">
+      <div>
+        <div class="day-label">◈ Day 1: Arrive and Connect</div>
+        <ul class="checklist">
+          <li><div class="icon">1</div><div>Save these numbers now: <strong>911</strong> (emergency), <strong>211</strong> (benefits and referrals), <strong>311</strong> (Dallas city services). Details in the <a href="#get-help">Get Help Now</a> section below.</div></li>
+          <li><div class="icon">2</div><div>If you are a refugee, SIV holder, or humanitarian parolee, contact your <strong>resettlement agency</strong>: <a href="https://www.rescue.org/united-states/dallas-tx" target="_blank">IRC Dallas</a> or <a href="https://ccdallas.org/services/immigration-refugee-services/" target="_blank">Catholic Charities Dallas</a>. They are your first point of contact for almost everything in the first 90 days.</div></li>
+          <li><div class="icon">3</div><div>No phone yet? Go to <strong>Vickery Park Library</strong> at 8333 Park Lane. Free wifi, free computers, multilingual staff, no ID required to use wifi. → <a href="https://dallaslibrary.org" target="_blank">dallaslibrary.org</a></div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="day-label">◈ Days 2 to 3: Documents and Benefits</div>
+        <ul class="checklist">
+          <li><div class="icon">4</div><div>Apply for <strong>SNAP (food), Medicaid, CHIP, and WIC</strong> at <a href="https://www.yourtexasbenefits.com" target="_blank">yourtexasbenefits.com</a>. One application covers most Texas benefits. Processing takes 30 to 45 days but is back paid to the day you applied.</div></li>
+          <li><div class="icon">5</div><div>Schedule a <strong>refugee health screening</strong> at Parkland Vickery Health Center, 8224 Park Lane, Dallas. Call 214-266-2000 or visit <a href="https://www.parklandhealth.org" target="_blank">parklandhealth.org</a>. <span style="background:#fff8ec;color:#7a5520;font-size:0.72rem;font-weight:600;border:1px solid #eacf92;border-radius:4px;padding:0.1rem 0.4rem;">VERIFY</span> current hours.</div></li>
+          <li><div class="icon">6</div><div>If you have children, start school enrollment at the <strong>Dallas ISD International Welcome Center</strong>. Call 972-925-5830. Interpreters are provided. See the enrollment guide below.</div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="day-label">◈ Days 4 to 7: Get Settled</div>
+        <ul class="checklist">
+          <li><div class="icon">7</div><div>Learn how to ride <strong>DART</strong> (Dallas Area Rapid Transit). Download the <a href="https://www.dart.org" target="_blank">GoPass app</a> to plan trips, buy fares, and find stops. Base local fare is $3 for a 2 hour pass. Full guide below.</div></li>
+          <li><div class="icon">8</div><div>Get <strong>free or low cost internet</strong>. <a href="https://www.pcsforpeople.org" target="_blank">PCs for People</a> serves income qualifying households. <a href="https://www.xfinity.com/learn/internet-service/acp" target="_blank">Xfinity Internet Essentials</a> is about $9.95 a month for eligible households. Free wifi at any Dallas Public Library.</div></li>
+          <li><div class="icon">9</div><div>Start <strong>English classes</strong>. <a href="https://www.dallascollege.edu" target="_blank">Dallas College WorkReadyU</a> offers free ESL plus job training at multiple campuses. Dallas Public Library runs free community ESL at select branches.</div></li>
+          <li><div class="icon">10</div><div>Register with <strong>Workforce Solutions Greater Dallas</strong> for job search, resume help, and childcare support while you train. Multiple offices. Call 214-290-1000 or visit <a href="https://www.wfsdallas.com" target="_blank">wfsdallas.com</a>.</div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="day-label">◈ Week 2: Build Stability</div>
+        <ul class="checklist">
+          <li><div class="icon">11</div><div>Open a <strong>bank account</strong>. Some banks accept an ITIN or foreign passport. Wells Fargo, Bank of America, and Chase all have Dallas branches. Ask your caseworker for the current refugee friendly option.</div></li>
+          <li><div class="icon">12</div><div>If you are a refugee, SIV holder, or Cuban or Haitian entrant, confirm enrollment in <strong>Refugee Medical Assistance (RMA)</strong> for 12 months from arrival. Your caseworker files this. For everyone else, apply for Medicaid and CHIP at <a href="https://www.yourtexasbenefits.com" target="_blank">yourtexasbenefits.com</a>.</div></li>
+          <li><div class="icon">13</div><div>Confirm your children are <strong>registered and attending school</strong>. Follow up if you have not received a start date. Contact the school main office or your caseworker.</div></li>
+          <li><div class="icon">14</div><div>Get a <strong>Dallas Public Library card</strong>, free with any photo ID and proof of address. No SSN required. Card unlocks free ebooks, language apps, and free computer time across all branches. → <a href="https://dallaslibrary.org" target="_blank">dallaslibrary.org</a></div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="day-label">◈ Weeks 3 to 4: Move Forward</div>
+        <ul class="checklist">
+          <li><div class="icon">15</div><div>If you have a foreign degree, start a <strong>credential evaluation</strong> through <a href="https://www.wes.org" target="_blank">WES</a> or <a href="https://www.ece.org" target="_blank">ECE</a>. Required for most skilled jobs. Ask your resettlement agency if professional re entry funds cover the cost.</div></li>
+          <li><div class="icon">16</div><div>Confirm your <strong>90 day plan</strong> with your caseworker. Most resettlement contracts cover employment goals, housing stability, and benefit enrollment during this period. Know what yours covers before it ends.</div></li>
+          <li><div class="icon">17</div><div>Connect with a <strong>community or cultural organization</strong>. For Afghan newcomers, the Islamic Association of North Texas in Richardson, East Plano Islamic Center, and Masjid Al Ihsan in Garland all serve Afghan heavy communities. See directory below for more.</div></li>
+          <li><div class="icon">18</div><div>If you need legal help with your immigration status, contact <strong><a href="https://www.hrionline.org" target="_blank">Human Rights Initiative of North Texas</a></strong> or <strong><a href="https://ccdallas.org/services/immigration-refugee-services/" target="_blank">Catholic Charities Dallas immigration services</a></strong>. Free for eligible newcomers. Intake can be competitive, apply early.</div></li>
+        </ul>
+      </div>
+    </div>
+    <p class="verified-date">Sources: Texas Office for Refugees, Texas Health and Human Services, Parkland Health, Dallas ISD, Dallas College. Last verified April 2026.</p>
+  </div>
+</section>
+
+<section id="get-help">
+  <div class="section-inner">
+    <div class="section-label">Decision Tree</div>
+    <h2>Who Do I Call?</h2>
+    <p class="section-intro">Not sure which number to use? Use this chart. Translation is available for all of these. Just say "interpreter" or the name of your language when someone answers.</p>
+    <div class="decision-grid">
+      <div class="decision-card red">
+        <div class="decision-number">911</div>
+        <h3>Emergency Services</h3>
+        <p>Police, fire, or medical emergency. Use when there is immediate danger to life or safety.</p>
+        <div class="when">Call when:</div>
+        <ul>
+          <li>Someone is hurt or in danger</li>
+          <li>There is a fire</li>
+          <li>A crime is happening right now</li>
+          <li>Medical emergency</li>
+        </ul>
+      </div>
+      <div class="decision-card blue">
+        <div class="decision-number">211</div>
+        <h3>Help and Referrals</h3>
+        <p>Free, 24/7, available in many languages. Your first call for most newcomer needs. → <a href="https://www.211texas.org" target="_blank" style="color:#2a6f7a">211texas.org</a></p>
+        <div class="when">Call when:</div>
+        <ul>
+          <li>You need food, housing, or health help</li>
+          <li>You do not know where to start</li>
+          <li>Benefits navigation</li>
+          <li>Mental health crisis support</li>
+        </ul>
+      </div>
+      <div class="decision-card green">
+        <div class="decision-number">311</div>
+        <h3>Dallas City Services</h3>
+        <p>Non emergency city issues and service requests. Also available at <a href="https://dallascityhall.com" target="_blank" style="color:var(--forest)">dallascityhall.com</a>.</p>
+        <div class="when">Call when:</div>
+        <ul>
+          <li>Trash or bulky item pickup</li>
+          <li>Streetlight, pothole, or water leak</li>
+          <li>Code enforcement issues</li>
+          <li>Noise complaints</li>
+        </ul>
+      </div>
+      <div class="decision-card honey">
+        <div class="decision-number">✦</div>
+        <h3>School Enrollment</h3>
+        <p>For Dallas ISD, contact the International Welcome Center. Other districts have their own enrollment offices.</p>
+        <div class="when">Contact when:</div>
+        <ul>
+          <li>Enrolling a child in school</li>
+          <li>Need language support for enrollment</li>
+          <li>Questions about ESL or bilingual placement</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem; background:white; border:1px solid var(--border); border-radius:10px; padding:1.1rem 1.25rem;">
+      <strong style="font-size:0.9rem; color:var(--forest);">🔒 Know Your Rights: If ICE Contacts You</strong>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.4rem;">You do not have to open your door unless ICE has a <strong>judicial warrant</strong> signed by a judge. ICE administrative warrants (forms I-200 or I-205) do not give them the right to enter. You have the right to remain silent. You have the right to speak to a lawyer before signing anything. Save the RAICES hotline: <strong>1-833-372-4236</strong>. More at <a href="https://www.raicestexas.org" target="_blank" style="color:var(--rust)">raicestexas.org</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="guides">
+  <div class="section-inner">
+    <div class="section-label">How To Guides</div>
+    <h2>Step by Step for Common Tasks</h2>
+    <p class="section-intro">Click any guide to expand the steps. Every step links to an official source. Items marked <span style="background:#fff8ec;color:#7a5520;font-size:0.75rem;font-weight:600;border:1px solid #eacf92;border-radius:4px;padding:0.1rem 0.4rem;">VERIFY</span> should be confirmed directly with the agency before you go.</p>
+    <div class="guides-grid">
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">›</div><h3>How to Ride DART</h3></div>
+        <div class="guide-card-body">Plan trips, buy GoPass fares, and ride buses or light rail.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li><strong>Plan your trip</strong> with the <a href="https://www.dart.org" target="_blank">DART Trip Planner</a>. Enter a start and end address. The tool shows bus, rail, and walking options.</li>
+          <li><strong>Pay with GoPass.</strong> Download the GoPass app on iPhone or Android. Buy a $3 local 2 hour pass, $6 local day pass, or $96 local monthly pass. <span class="verify">VERIFY</span> current fares at <a href="https://www.dart.org" target="_blank">dart.org</a>.</li>
+          <li><strong>Reduced fares</strong> are available for seniors, students, people with disabilities, and low income riders. Apply through DART directly.</li>
+          <li>If you cannot use regular DART because of a disability, apply for DART Paratransit. Call 214-515-7272. Medical verification required.</li>
+          <li>If you have Medicaid and need a ride to a doctor appointment, use <strong>Non Emergency Medical Transportation</strong>. The transportation line is on your Medicaid card. Book 2 business days ahead.</li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">✦</div><h3>Enroll a Child in Dallas ISD</h3></div>
+        <div class="guide-card-body">Contact the International Welcome Center, bring documents, complete placement.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li>Contact the <strong>Dallas ISD International Welcome Center</strong>. Call 972-925-5830 to schedule. Interpreters are available. → <a href="https://www.dallasisd.org" target="_blank">dallasisd.org</a></li>
+          <li>Bring if you have them: proof of address, proof of age (birth certificate or passport), immunization records, prior school records. <span class="verify">VERIFY</span> full document list when you call.</li>
+          <li>No shot records? The school nurse works with you to catch up. Do not delay enrollment waiting for paperwork.</li>
+          <li>Your child will receive an <strong>English language assessment</strong> if English is not their first language. This determines ESL or bilingual placement.</li>
+          <li>Kids have a right to public school enrollment regardless of immigration status. If you are asked about status in a way that feels wrong, stop and call HRI for advice.</li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">✦</div><h3>Enroll in Other DFW Districts</h3></div>
+        <div class="guide-card-body">Richardson, Garland, Irving, and Plano each have their own process.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li><strong>Richardson ISD</strong> (serves Vickery Meadow area). Enroll at <a href="https://web.risd.org" target="_blank">risd.org</a> or call 469-593-0500.</li>
+          <li><strong>Garland ISD.</strong> Enroll at <a href="https://www.garlandisd.net" target="_blank">garlandisd.net</a>. Has dedicated newcomer centers for older students.</li>
+          <li><strong>Irving ISD.</strong> Enroll at <a href="https://www.irvingisd.net" target="_blank">irvingisd.net</a>.</li>
+          <li><strong>Plano ISD.</strong> Enroll at <a href="https://www.pisd.edu" target="_blank">pisd.edu</a>.</li>
+          <li>Every district has a central enrollment office. Ask specifically about ESL, bilingual, and newcomer programs. Interpreters are free and required by federal law.</li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">＋</div><h3>Get a Refugee Health Screening</h3></div>
+        <div class="guide-card-body">Free health assessment for eligible newcomers. Do this early.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li><strong>Who is eligible:</strong> Refugees, asylees, SIV holders, Afghan and Ukrainian humanitarian parolees, Cuban and Haitian entrants, and others. Check eligibility at <a href="https://www.hhs.texas.gov/services/social/refugee-services" target="_blank">Texas Office for Refugees</a>.</li>
+          <li>Go to <strong>Parkland Vickery Health Center</strong>, 8224 Park Lane, Dallas, TX 75231.</li>
+          <li>Call ahead: 214-266-2000. More info at <a href="https://www.parklandhealth.org" target="_blank">parklandhealth.org</a>. <span class="verify">VERIFY</span> current hours and intake process.</li>
+          <li>Bring your immigration documents, any medical records you have, and anything you want checked out.</li>
+          <li>First visit usually covers: TB test, vaccine catch up, basic bloodwork, and a mental health screening. Interpreters are available.</li>
+          <li>After your screening, the clinic connects you to ongoing primary care through Parkland's sliding scale program if you do not have insurance.</li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">Aa</div><h3>Start English Classes (ESL)</h3></div>
+        <div class="guide-card-body">Options for adults, job seekers, and families across DFW.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li><strong>If newly arrived refugee,</strong> ask your caseworker first. They can enroll you in state funded English Language Training at no cost.</li>
+          <li><strong>Dallas College WorkReadyU</strong> combines ESL with job training in healthcare, HVAC, IT, logistics, and more. Free. Call 972-860-7400 or visit <a href="https://www.dallascollege.edu" target="_blank">dallascollege.edu</a>.</li>
+          <li><strong>Dallas Public Library</strong> runs free ESL at select branches. No agency required. → <a href="https://dallaslibrary.org" target="_blank">dallaslibrary.org</a></li>
+          <li><strong>Heart House Dallas</strong> offers ESL and youth programs for refugee families in Vickery Meadow. → <a href="https://hearthousedallas.org" target="_blank">hearthousedallas.org</a></li>
+          <li><strong>Literacy Instruction for Texas (LIFT)</strong> offers adult literacy and ESL across DFW. → <a href="https://lift-texas.org" target="_blank">lift-texas.org</a></li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">⌁</div><h3>Get a Phone and Internet</h3></div>
+        <div class="guide-card-body">Free and low cost options in Dallas.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li><strong>Low cost home internet:</strong> <a href="https://www.xfinity.com/learn/internet-service/acp" target="_blank">Xfinity Internet Essentials</a> is about $9.95 a month for eligible households.</li>
+          <li><strong>Low cost computers and internet:</strong> <a href="https://www.pcsforpeople.org" target="_blank">PCs for People</a> serves income qualifying households nationwide. <span class="verify">VERIFY</span> current Texas distribution options.</li>
+          <li><strong>Free wifi right now:</strong> any Dallas Public Library branch. No ID required for wifi. → <a href="https://dallaslibrary.org" target="_blank">dallaslibrary.org</a></li>
+          <li><strong>Free or low cost phone service:</strong> the federal <a href="https://www.lifelinesupport.org" target="_blank">Lifeline program</a> provides discounted phones and service for income qualifying households. Ask your resettlement agency for current carrier partners.</li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">⚠</div><h3>Avoid Job and Housing Scams</h3></div>
+        <div class="guide-card-body">Protect yourself from scams that target newcomers.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li><strong>Job scam red flags:</strong> jobs that ask you to pay money upfront, ask for bank info before hiring, or promise very high pay for easy work. → <a href="https://consumer.ftc.gov/articles/job-scams" target="_blank">FTC job scam guide</a></li>
+          <li><strong>Rental scam red flags:</strong> "landlord" only texts and never meets in person, price is far below market, deposit requested by Zelle or CashApp, keys "in a lockbox" so you can just move in. → <a href="https://consumer.ftc.gov/articles/rental-listing-scams" target="_blank">FTC rental scam guide</a></li>
+          <li><strong>Never wire money</strong> for a job, apartment, or "immigration fee." Official agencies do not accept Zelle, Venmo, or gift cards.</li>
+          <li><strong>Report scams</strong> to the Texas Attorney General at <a href="https://www.texasattorneygeneral.gov" target="_blank">texasattorneygeneral.gov</a> or call 1-800-621-0508.</li>
+          <li><strong>Report hate crimes</strong> to Dallas Police at 214-671-3001, or the FBI Dallas field office at 972-559-5000.</li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">⌂</div><h3>Find Housing and Renter Help</h3></div>
+        <div class="guide-card-body">Search tools, counseling, and renter protections in Texas.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li><strong>Important note:</strong> Texas has no state specific housing programs only for new arrivals. You use the same tools as everyone else.</li>
+          <li><strong>Search for housing:</strong> <a href="https://www.socialserve.com/tenant/TX/" target="_blank">Texas Housing Search</a>. Free search with filters for rent range, voucher acceptance, and bedrooms.</li>
+          <li><strong>Texas tenant rights are weaker than many states.</strong> Eviction can begin 3 days after missed rent. Court can move in 10 to 14 days. Read every lease slowly before you sign.</li>
+          <li><strong>Free legal help for tenants:</strong> <a href="https://www.lanwt.org" target="_blank">Legal Aid of NorthWest Texas</a>. Call 1-888-529-5277. They handle eviction defense and security deposit disputes.</li>
+          <li><strong>Rental assistance:</strong> contact your resettlement agency first. They often have emergency funds. Also call 211 for current Dallas area assistance programs.</li>
+          <li><strong>Warning:</strong> Family Gateway (Dallas's main family shelter) does not serve migrants, refugees, or asylum seekers. Do not be directed there. Call your resettlement agency or 211 for alternative shelter.</li>
+        </ol></div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-card-header"><div class="guide-emoji">＄</div><h3>Apply for SNAP, Medicaid, WIC, CHIP</h3></div>
+        <div class="guide-card-body">One application covers most Texas benefits.</div>
+        <button class="guide-toggle" onclick="toggleGuide(this)">Show steps ↓</button>
+        <div class="guide-card-steps"><ol>
+          <li>Apply at <a href="https://www.yourtexasbenefits.com" target="_blank">yourtexasbenefits.com</a>. One application covers SNAP (food), Medicaid, CHIP (kids health), and TANF (cash).</li>
+          <li><strong>SNAP:</strong> 30 to 45 days to process. Back paid to application date. Single person can receive up to about $292 a month. Family of 4 up to about $975.</li>
+          <li><strong>Medicaid for kids:</strong> usually eligible under 19 even with limited income. <strong>Medicaid for adults:</strong> Texas did not expand Medicaid. Most working age adults without kids do not qualify. Refugees receive RMA for 12 months instead.</li>
+          <li><strong>WIC</strong> covers pregnant women, new mothers, and children under 5. Card buys milk, eggs, cereal, formula, fruit, and vegetables. Apply at <a href="https://texaswic.org" target="_blank">texaswic.org</a> or call 1-800-942-3678.</li>
+          <li><strong>For your interview,</strong> bring ID, immigration papers, proof of address, pay stubs, and rent receipts. Interpreters are free.</li>
+        </ol></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="directory">
+  <div class="section-inner">
+    <div class="section-label">Verified Directory</div>
+    <h2>Key Organizations in Dallas</h2>
+    <p class="section-intro">Curated from official sources. Addresses and numbers verified where possible. Always call ahead. For a broader search, use <a href="https://www.211texas.org" target="_blank">211texas.org</a>.</p>
+    <div class="directory-filters">
+      <button class="filter-btn active" onclick="filterDir(this, 'all')">All</button>
+      <button class="filter-btn" onclick="filterDir(this, 'services')">Resettlement</button>
+      <button class="filter-btn" onclick="filterDir(this, 'legal')">Legal</button>
+      <button class="filter-btn" onclick="filterDir(this, 'health')">Health</button>
+      <button class="filter-btn" onclick="filterDir(this, 'education')">Education / ESL</button>
+      <button class="filter-btn" onclick="filterDir(this, 'employment')">Employment</button>
+      <button class="filter-btn" onclick="filterDir(this, 'housing')">Housing</button>
+      <button class="filter-btn" onclick="filterDir(this, 'benefits')">Benefits</button>
+      <button class="filter-btn" onclick="filterDir(this, 'digital')">Digital Access</button>
+    </div>
+    <div class="dir-grid" id="dirGrid">
+
+      <div class="dir-card" data-cat="services">
+        <div class="dir-card-top"><h3>IRC Dallas</h3><span class="dir-tag tag_services">Resettlement</span></div>
+        <div class="dir-desc">International Rescue Committee, Dallas field office. Refugee resettlement and integration services.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://www.rescue.org/united-states/dallas-tx" target="_blank">rescue.org/united-states/dallas-tx</a></span></div>
+      </div>
+
+      <div class="dir-card" data-cat="services">
+        <div class="dir-card-top"><h3>Catholic Charities Dallas</h3><span class="dir-tag tag_services">Resettlement</span></div>
+        <div class="dir-desc">Refugee resettlement, immigration legal services, workforce programs, and emergency assistance.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://ccdallas.org/services/immigration-refugee-services/" target="_blank">ccdallas.org</a></span>
+          <span><span class="mi">📞</span> 214-520-6590</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="services">
+        <div class="dir-card-top"><h3>Texas Office for Refugees</h3><span class="dir-tag tag_services">State Office</span></div>
+        <div class="dir-desc">State office coordinating refugee programs in Texas. Sets eligibility rules and oversees local resettlement partners.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://www.hhs.texas.gov/services/social/refugee-services" target="_blank">hhs.texas.gov, refugee services</a></span></div>
+      </div>
+
+      <div class="dir-card" data-cat="legal">
+        <div class="dir-card-top"><h3>Human Rights Initiative of North Texas</h3><span class="dir-tag tag_legal">Legal</span></div>
+        <div class="dir-desc">Free immigration legal services for asylum seekers, refugees, SIV holders, and survivors of violence. Intake is competitive.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://www.hrionline.org" target="_blank">hrionline.org</a></span>
+          <span><span class="mi">📞</span> 214-855-0520</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="legal">
+        <div class="dir-card-top"><h3>RAICES Texas</h3><span class="dir-tag tag_legal">Legal</span></div>
+        <div class="dir-desc">Statewide immigration legal services with a hotline for urgent cases. Represents people in detention and defends asylum claims.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://www.raicestexas.org" target="_blank">raicestexas.org</a></span>
+          <span><span class="mi">📞</span> 1-833-372-4236</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="legal">
+        <div class="dir-card-top"><h3>Legal Aid of NorthWest Texas</h3><span class="dir-tag tag_legal">Legal</span></div>
+        <div class="dir-desc">Free civil legal help for income eligible residents. Covers eviction, domestic violence, consumer fraud, and family law.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://www.lanwt.org" target="_blank">lanwt.org</a></span>
+          <span><span class="mi">📞</span> 1-888-529-5277</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="benefits">
+        <div class="dir-card-top"><h3>Your Texas Benefits</h3><span class="dir-tag tag_benefits">Benefits</span></div>
+        <div class="dir-desc">One portal for SNAP, Medicaid, CHIP, TANF, and other Texas Health and Human Services programs.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://www.yourtexasbenefits.com" target="_blank">yourtexasbenefits.com</a></span>
+          <span><span class="mi">📞</span> Call 2-1-1 and press option 2</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="benefits">
+        <div class="dir-card-top"><h3>211 Texas</h3><span class="dir-tag tag_benefits">Referrals</span></div>
+        <div class="dir-desc">24/7 statewide helpline. Translation in many languages. Connects to food, housing, health, legal, and education resources.</div>
+        <div class="dir-meta">
+          <span><span class="mi">📞</span> Call or text <strong>2-1-1</strong></span>
+          <span><span class="mi">🔗</span> <a href="https://www.211texas.org" target="_blank">211texas.org</a></span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="health">
+        <div class="dir-card-top"><h3>Parkland Vickery Health Center</h3><span class="dir-tag tag_health">Health</span></div>
+        <div class="dir-desc">Main clinic for refugee health screenings in Dallas. Offers ongoing primary care through Parkland's sliding scale program.</div>
+        <div class="dir-meta">
+          <span><span class="mi">📍</span> 8224 Park Lane, Dallas, TX 75231</span>
+          <span><span class="mi">📞</span> 214-266-2000</span>
+          <span><span class="mi">🔗</span> <a href="https://www.parklandhealth.org" target="_blank">parklandhealth.org</a></span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="health">
+        <div class="dir-card-top"><h3>USCRI Afghan Behavioral Health Line</h3><span class="dir-tag tag_health">Health</span></div>
+        <div class="dir-desc">24 hour phone support for Afghan newcomers in Dari and Pashto. Free, no insurance required.</div>
+        <div class="dir-meta">
+          <span><span class="mi">📞</span> 1-800-615-6514 (Dari and Pashto)</span>
+          <span><span class="mi">🔗</span> <a href="https://refugees.org" target="_blank">refugees.org</a></span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="health">
+        <div class="dir-card-top"><h3>Los Barrios Unidos Community Clinic</h3><span class="dir-tag tag_health">Health</span></div>
+        <div class="dir-desc">Federally qualified health center serving West Dallas. Primary care and pediatric dental on a sliding scale.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://www.lbuci.org" target="_blank">lbuci.org</a></span>
+          <span><span class="mi">📞</span> 214-540-0300</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="education">
+        <div class="dir-card-top"><h3>Dallas ISD International Welcome Center</h3><span class="dir-tag tag_education">Education</span></div>
+        <div class="dir-desc">Central enrollment and placement for new international students in Dallas ISD. Interpreters provided.</div>
+        <div class="dir-meta">
+          <span><span class="mi">📞</span> 972-925-5830</span>
+          <span><span class="mi">🔗</span> <a href="https://www.dallasisd.org" target="_blank">dallasisd.org</a></span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="education">
+        <div class="dir-card-top"><h3>Dallas College WorkReadyU</h3><span class="dir-tag tag_education">ESL</span></div>
+        <div class="dir-desc">Free English language training combined with job skills. Healthcare, HVAC, IT, logistics, welding. Campuses across Dallas.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://www.dallascollege.edu" target="_blank">dallascollege.edu</a></span>
+          <span><span class="mi">📞</span> 972-860-7400</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="education">
+        <div class="dir-card-top"><h3>Dallas Public Library</h3><span class="dir-tag tag_education">ESL and Access</span></div>
+        <div class="dir-desc">Free ESL at select branches, free wifi, free computers, free printing (first 10 pages). No SSN required for library card.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://dallaslibrary.org" target="_blank">dallaslibrary.org</a></span></div>
+      </div>
+
+      <div class="dir-card" data-cat="education">
+        <div class="dir-card-top"><h3>Heart House Dallas</h3><span class="dir-tag tag_education">Youth + ESL</span></div>
+        <div class="dir-desc">ESL, after school, and summer programs for refugee children and families. Vickery Meadow based.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://hearthousedallas.org" target="_blank">hearthousedallas.org</a></span></div>
+      </div>
+
+      <div class="dir-card" data-cat="employment">
+        <div class="dir-card-top"><h3>Workforce Solutions Greater Dallas</h3><span class="dir-tag tag_employment">Employment</span></div>
+        <div class="dir-desc">Regional workforce board. Resume writing, job matching, interview practice, and childcare subsidy while training.</div>
+        <div class="dir-meta">
+          <span><span class="mi">🔗</span> <a href="https://www.wfsdallas.com" target="_blank">wfsdallas.com</a></span>
+          <span><span class="mi">📞</span> 214-290-1000</span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="employment">
+        <div class="dir-card-top"><h3>American Job Centers (DFW)</h3><span class="dir-tag tag_employment">Employment</span></div>
+        <div class="dir-desc">Walk in career centers for job search, training referrals, and employer events. Multiple DFW locations.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://www.careeronestop.org" target="_blank">careeronestop.org</a></span></div>
+      </div>
+
+      <div class="dir-card" data-cat="housing">
+        <div class="dir-card-top"><h3>Texas Housing Search</h3><span class="dir-tag tag_housing">Housing</span></div>
+        <div class="dir-desc">Free statewide rental search. Filter by voucher acceptance, price range, and accessibility features.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://www.socialserve.com/tenant/TX/" target="_blank">socialserve.com, Texas</a></span></div>
+      </div>
+
+      <div class="dir-card" data-cat="housing">
+        <div class="dir-card-top"><h3>Genesis Women's Shelter</h3><span class="dir-tag tag_housing">Safety</span></div>
+        <div class="dir-desc">Emergency shelter and counseling for women and children escaping domestic violence. Does not ask about immigration status.</div>
+        <div class="dir-meta">
+          <span><span class="mi">📞</span> 214-946-4357 (24/7)</span>
+          <span><span class="mi">🔗</span> <a href="https://www.genesisshelter.org" target="_blank">genesisshelter.org</a></span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="housing">
+        <div class="dir-card-top"><h3>Mosaic Family Services</h3><span class="dir-tag tag_housing">Safety</span></div>
+        <div class="dir-desc">Serves survivors of human trafficking, domestic violence, and other crimes. Runs an Afghan Refugee Services program.</div>
+        <div class="dir-meta">
+          <span><span class="mi">📞</span> 214-823-4434</span>
+          <span><span class="mi">🔗</span> <a href="https://mosaicservices.org" target="_blank">mosaicservices.org</a></span>
+        </div>
+      </div>
+
+      <div class="dir-card" data-cat="digital">
+        <div class="dir-card-top"><h3>PCs for People</h3><span class="dir-tag tag_digital">Internet</span></div>
+        <div class="dir-desc">Low cost internet and refurbished computers for income qualifying households nationwide.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://www.pcsforpeople.org" target="_blank">pcsforpeople.org</a></span></div>
+      </div>
+
+      <div class="dir-card" data-cat="digital">
+        <div class="dir-card-top"><h3>Xfinity Internet Essentials</h3><span class="dir-tag tag_digital">Internet</span></div>
+        <div class="dir-desc">Low cost home internet for eligible households. Includes option to buy a low cost computer.</div>
+        <div class="dir-meta"><span><span class="mi">🔗</span> <a href="https://www.xfinity.com/learn/internet-service/acp" target="_blank">xfinity.com, internet essentials</a></span></div>
+      </div>
+
+    </div>
+    <p class="verified-date" style="margin-top:1.25rem;">Note: <span style="background:#fff8ec;color:#7a5520;font-size:0.72rem;font-weight:600;border:1px solid #eacf92;border-radius:4px;padding:0.1rem 0.4rem;">VERIFY</span> addresses and hours before visiting. They change. When in doubt, call ahead or check the official website.</p>
+  </div>
+</section>
+
+<section id="official">
+  <div class="section-inner">
+    <div class="section-label">Official Sources</div>
+    <h2>Official Guides and Resources</h2>
+    <p class="section-intro">This site is a companion, not a replacement. These are the authoritative sources. Go here for full information.</p>
+    <div class="guides-list">
+      <a class="guide-link-card" href="https://www.hhs.texas.gov/services/social/refugee-services" target="_blank">
+        <div class="guide-link-icon">GOV</div>
+        <div class="guide-link-text">
+          <h3>Texas Office for Refugees, HHS</h3>
+          <p>Official state page for refugee services in Texas. Covers eligibility, enrolled programs, and state partners. Best for checking if you qualify for state funded benefits.</p>
+        </div>
+      </a>
+      <a class="guide-link-card" href="https://www.yourtexasbenefits.com" target="_blank">
+        <div class="guide-link-icon">GOV</div>
+        <div class="guide-link-text">
+          <h3>Your Texas Benefits</h3>
+          <p>One portal to apply for SNAP, Medicaid, CHIP, and TANF. Also the place to manage ongoing benefits and upload documents. Available in English and Spanish.</p>
+        </div>
+      </a>
+      <a class="guide-link-card" href="https://www.211texas.org" target="_blank">
+        <div class="guide-link-icon">211</div>
+        <div class="guide-link-text">
+          <h3>211 Texas, Statewide Help Line</h3>
+          <p>Web version of 211 resources. Food, housing, health, legal, and more. 24/7 phone support in many languages.</p>
+        </div>
+      </a>
+      <a class="guide-link-card" href="https://www.uscis.gov/humanitarian/refugees-and-asylum" target="_blank">
+        <div class="guide-link-icon">USCIS</div>
+        <div class="guide-link-text">
+          <h3>USCIS Refugees and Asylum</h3>
+          <p>Federal source for immigration status information. Forms, fees, processing times, and official policy. Best for any question about your federal case.</p>
+        </div>
+      </a>
+      <a class="guide-link-card" href="https://dallascityhall.com" target="_blank">
+        <div class="guide-link-icon">CITY</div>
+        <div class="guide-link-text">
+          <h3>City of Dallas 311</h3>
+          <p>Report city service needs (trash, streetlights, code issues). Available by phone and online. Interpretation available at no cost.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Dallas Newcomer QuickStart.</strong> A companion to official resources. Not affiliated with any government agency.</p>
+  <p>Informational only. Not legal advice. Services and eligibility change. Verify with agencies directly before acting.</p>
+  <p>To report an outdated link or incorrect information, email <a href="mailto:hello@dallasnewcomer.org">hello@dallasnewcomer.org</a>. Last reviewed: April 2026.</p>
+  <p style="margin-top:1rem;">Built for the refugee and newcomer community in Dallas and across the DFW area.</p>
+</footer>
+
+<script>
+  function toggleGuide(btn) {
+    const steps = btn.nextElementSibling;
+    const isOpen = steps.classList.contains('open');
+    steps.classList.toggle('open', !isOpen);
+    btn.textContent = isOpen ? 'Show steps ↓' : 'Hide steps ↑';
+  }
+  function filterDir(btn, cat) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.dir-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) { card.classList.remove('hidden'); }
+      else { card.classList.add('hidden'); }
+    });
+  }
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+  function setLang(lang) {
+    document.querySelectorAll('.lang-tag').forEach(t => t.classList.remove('active-lang'));
+    event.target.classList.add('active-lang');
+    if (lang === 'en') {
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
+      location.reload(); return;
+    }
+    var select = document.querySelector('.goog-te-combo');
+    if (select) { select.value = lang; select.dispatchEvent(new Event('change')); return; }
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
+    location.reload();
+  }
+</script>
+<div id="google_translate_element" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;background:white;border-radius:8px;padding:0.4rem 0.7rem;box-shadow:0 2px 12px rgba(0,0,0,0.15);border:1px solid #ddd;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'ar,fa,fr,ps,es,uk,so,ti,vi,zh-CN',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
